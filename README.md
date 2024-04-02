@@ -13,7 +13,7 @@ Număr de Cuvinte	Timp de Execuție
 2000	            186 ms
 5000	            400 ms
 10000	            900 ms
-12000	            3 minute
+12000	            2 minute
 
 Observații:
 •	Timpul de execuție variază în funcție de dimensiunea textului. Cu cât textul era mai mare, cu atât timpul de execuție creștea.
