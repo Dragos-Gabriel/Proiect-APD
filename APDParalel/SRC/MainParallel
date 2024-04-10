@@ -1,0 +1,29 @@
+package Paralel;
+
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
+public class MainParallel {
+    public static void main(String[] args) {
+        String filename = "Text_12000.txt";
+        String[] wordsToCount = { "timp", "fenomen", "vechi" };
+
+        // Crearea obiectului TextProcessor și inițializarea cu fișierul de procesat
+        TextProcessor textProcessor = new TextProcessor(filename);
+
+        long startTime = System.currentTimeMillis();
+
+        // Apelarea metodei pentru numărarea cuvintelor paralel
+        Map<String, Integer> wordCounts = textProcessor.countWordsParallel(wordsToCount);
+
+        // Oprește timpul de execuție
+        long endTime = System.currentTimeMillis();
+        long elapsedTime = endTime - startTime;
+
+        System.out.println("Timp total de rulare este: " + elapsedTime + " ms");
+
+        // Scriere în fișierul Excel
+        String excelFilename = "WordCounts.csv";
+        ExcelWriter.writeTimings(wordCounts, elapsedTime, excelFilename);
+    }
+}
