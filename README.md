@@ -8,12 +8,19 @@ Am implementat algoritmul de căutare a cuvintelor într-un text folosind limbaj
 •	Memorie RAM: 6 GB
 •	Sistem de Operare: Windows 10 Pro
 
-3. Rezultate Experimentale:
+3. Rezultate Experimentale Secvential:
 Număr de Cuvinte	Timp de Execuție
 2000	            186 ms
 5000	            400 ms
 10000	            900 ms
 12000	            2 minute(120000 ms)
+
+4. Rezultate Experimentale Paralel:
+Număr de Cuvinte	Timp de Execuție
+2000	            66 ms
+5000	            200 ms
+10000	            700 ms
+12000	            900 ms
 
 Observații:
 •	Timpul de execuție variază în funcție de dimensiunea textului. Cu cât textul era mai mare, cu atât timpul de execuție creștea.
