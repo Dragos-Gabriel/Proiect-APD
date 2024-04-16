@@ -24,7 +24,15 @@ Număr de Cuvinte	Timp de Execuție
 
 În codurile paralele, am folosit thread-uri pentru a realiza paralelismul. Mai exact, în clasa TextProcessor, în metoda countWordsSequential, am înlocuit bucla secvențială care numără cuvintele cu o abordare paralelă, astfel încât fiecare fir de execuție să numere cuvintele într-o porțiune separată a textului. Astfel, fiecare fragment de text este procesat de către un fir de execuție separat, ceea ce duce la o execuție mai rapidă a operației de numărare a cuvintelor.
 
-Observații:
+Observații cod secvential:
 •	Timpul de execuție variază în funcție de dimensiunea textului. Cu cât textul era mai mare, cu atât timpul de execuție creștea.
 •	Performanța poate fi îmbunătățită prin utilizarea altor algoritmi de căutare sau optimizări specifice limbajului de programare.
 •	Menționez faptul că aceste rezultate pot varia în funcție de resursele hardware și de sarcinile în curs de desfășurare pe mașină în momentul rulării.
+
+Observații pentru versiunea paralelă:
+
+• Timpul de execuție variază în funcție de dimensiunea textului și de numărul de fire de execuție utilizate. Cu cât textul este mai mare și cu cât sunt mai multe fire de execuție, cu atât timpul de execuție poate fi redus.
+
+• Performanța poate fi îmbunătățită prin utilizarea altor strategii de paralelizare sau optimizări specifice limbajului de programare, cum ar fi folosirea unor biblioteci de paralelism mai eficiente sau utilizarea algoritmilor mai optimi pentru sarcina specifică.
+
+• Este important de remarcat că rezultatele obținute pot varia în funcție de resursele hardware disponibile și de sarcinile concurente care rulează pe mașină în momentul rulării. Este recomandat să se evalueze performanța pe mai multe configurații hardware și condiții de sarcină pentru a obține o înțelegere mai cuprinzătoare a performanței sistemului.
