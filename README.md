@@ -22,7 +22,7 @@ Număr de Cuvinte	Timp de Execuție
 10000	            700 ms
 12000	            900 ms
 
-An folosi thread-uri pentru a procesa diferite fragmente ale textului simultan. Amm împărți textul în bucăți egale și am creat un fir de execuție pentru fiecare bucățică, fiecare fir de execuție va număra aparițiile cuvintelor în partea sa de text. La final, am adunat rezultatele parțiale pentru a obține rezultatul final. Mai exact, în clasa TextProcessor, în metoda countWordsSequential, am înlocuit bucla secvențială care numără cuvintele cu o abordare paralelă, astfel încât fiecare fir de execuție să numere cuvintele într-o porțiune separată a textului. Astfel, fiecare fragment de text este procesat de către un fir de execuție separat, ceea ce duce la o execuție mai rapidă a operației de numărare a cuvintelor.
+An folosi thread-uri pentru a procesa diferite fragmente ale textului simultan. Am împărți textul în bucăți egale și am creat un fir de execuție pentru fiecare bucățică, fiecare fir de execuție va număra aparițiile cuvintelor în partea sa de text. La final, am adunat rezultatele parțiale pentru a obține rezultatul final. Mai exact, în clasa TextProcessor, în metoda countWordsSequential, am înlocuit bucla secvențială care numără cuvintele cu o abordare paralelă, astfel încât fiecare fir de execuție să numere cuvintele într-o porțiune separată a textului. Astfel, fiecare fragment de text este procesat de către un fir de execuție separat, ceea ce duce la o execuție mai rapidă a operației de numărare a cuvintelor.
 
 Observații cod secvential:
 •	Timpul de execuție variază în funcție de dimensiunea textului. Cu cât textul era mai mare, cu atât timpul de execuție creștea.
