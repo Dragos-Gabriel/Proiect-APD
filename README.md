@@ -17,7 +17,7 @@ Număr de Cuvinte	Timp de Execuție
 
 4. Rezultate Experimentale Paralel:
 Număr de Cuvinte	Timp de Execuție
-2000	            66 ms
+2000	            86 ms
 5000	            200 ms
 10000	            700 ms
 12000	            900 ms
