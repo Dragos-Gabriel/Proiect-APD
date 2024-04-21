@@ -22,6 +22,15 @@ Număr de Cuvinte	Timp de Execuție
 10000	            700 ms
 12000	            900 ms
 
+4. Rezultate Experimentale ParalelStream:
+Număr de Cuvinte	Timp de Execuție
+2000	            86 ms
+5000	            200 ms
+10000	            700 ms
+12000	            900 ms
+
+La metoda ParallelStream am adaugat in proiect si timpul pentru rularea proiectului Java si Timp total de rulare al metodei countWordsParallel acesta este gasit in fisierul outputs din proiectul parallelstream
+
 An folosi thread-uri pentru a procesa diferite fragmente ale textului simultan. Am împărți textul în bucăți egale și am creat un fir de execuție pentru fiecare bucățică, fiecare fir de execuție va număra aparițiile cuvintelor în partea sa de text. La final, am adunat rezultatele parțiale pentru a obține rezultatul final. Mai exact, în clasa TextProcessor, în metoda countWordsSequential, am înlocuit bucla secvențială care numără cuvintele cu o abordare paralelă, astfel încât fiecare fir de execuție să numere cuvintele într-o porțiune separată a textului. Astfel, fiecare fragment de text este procesat de către un fir de execuție separat, ceea ce duce la o execuție mai rapidă a operației de numărare a cuvintelor.
 
 Observații cod secvential:
