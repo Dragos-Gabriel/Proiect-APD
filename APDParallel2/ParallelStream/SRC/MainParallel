@@ -1,0 +1,43 @@
+package Proiect;
+
+import java.util.Map;
+
+public class MainParallel {
+    public static void main(String[] args) {
+        // Măsurarea timpului de început al programului Java
+        long javaStartTime = System.currentTimeMillis();
+
+        String filename = "Text_12000.txt";
+        String[] wordsToCount = { "este", "fenomen", "vechi", "timp", "omenirea" , "explorarea" };
+
+        // Crearea obiectului TextProcessor și inițializarea cu fișierul de procesat
+        TextProcessor textProcessor = new TextProcessor(filename);
+
+        long startTimeTotal = System.currentTimeMillis(); // Momentul de start pentru timpul total de rulare
+
+        // Apelarea metodei pentru numărarea cuvintelor în mod paralel
+        long startTime = System.currentTimeMillis(); // Momentul de start pentru timpul de rulare al metodei countWordsParallel
+        Map<String, Integer> wordCounts = textProcessor.countWordsParallel(wordsToCount);
+        long endTime = System.currentTimeMillis(); // Momentul de sfârșit pentru timpul de rulare al metodei countWordsParallel
+        long elapsedTime = endTime - startTime; // Timpul de rulare al metodei countWordsParallel
+
+        // Oprește timpul de execuție total
+        long endTimeTotal = System.currentTimeMillis();
+        long elapsedTimeTotal = endTimeTotal - startTimeTotal;
+
+        // Afiseaza timpul total de rulare și timpul de rulare al metodei countWordsParallel
+        System.out.println("Timp total de rulare al metodei countWordsParallel este: " + elapsedTime + " ms");
+        System.out.println("Timp total de rulare este: " + elapsedTimeTotal + " ms");
+
+        // Scriere în fișierul Excel
+        String excelFilename = "WordCounts.csv";
+        ExcelWriter.writeTimings(wordCounts, elapsedTime, excelFilename);
+        
+        // Măsurarea timpului de sfârșit al programului Java
+        long javaEndTime = System.currentTimeMillis();
+        long javaElapsedTime = javaEndTime - javaStartTime;
+        
+        // Afișarea timpului de rulare al programului Java
+        System.out.println("Timp de execuție al programului Java: " + javaElapsedTime + " ms");
+    }
+}
