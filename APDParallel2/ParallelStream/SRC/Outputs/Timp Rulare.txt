@@ -1,0 +1,23 @@
+Pentru 12000 de cuvinte
+Timp total de rulare al metodei countWordsParallel este: 800 ms
+Timp total de rulare este: 800 ms
+Fisierul Excel a fost creat cu succes.
+Timp de execuție al programului Java: 202 ms
+
+Pentru 10000 de cuvinte
+Timp total de rulare al metodei countWordsParallel este: 600 ms
+Timp total de rulare este: 600 ms
+Fisierul Excel a fost creat cu succes.
+Timp de execuție al programului Java: 100 ms
+
+Pentru 5000 de cuvinte
+Timp total de rulare al metodei countWordsParallel este: 400 ms
+Timp total de rulare este: 400 ms
+Fisierul Excel a fost creat cu succes.
+Timp de execuție al programului Java: 180 ms
+
+Pentru 2000 de cuvinte 
+Timp total de rulare al metodei countWordsParallel este: 123 ms
+Timp total de rulare este: 123 ms
+Fisierul Excel a fost creat cu succes.
+Timp de execuție al programului Java: 140 ms
